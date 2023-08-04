@@ -1,0 +1,46 @@
+<!-- <h3>Add user</h3>
+<div class="container">
+    <form  [formGroup]="userForm" action="" method="post"  (submit)="onSubmit()">
+        <label>Name <input type="text" class="form-control" formControlName="name"></label><br>
+        <label>Email <input type="text" class="form-control" formControlName="email"></label><br>
+        <button type="submit" class="btn btn-primary mt-2">submit</button>
+    </form>
+</div>
+
+
+
+
+<h3>User list</h3>
+<ul>
+    <li *ngFor="let user of users">{{user.name}}|{{user.email}}</li>
+
+</ul> -->
+
+
+<h3>Add user</h3>
+<div class="container">
+  <form [formGroup]="userForm" (submit)="onSubmit()">
+    <label>Name <input type="text" class="form-control" formControlName="name"></label><br>
+    <label>Phone Number <input type="text" class="form-control" formControlName="phoneno"></label><br>
+    <label>Email <input type="text" class="form-control" formControlName="email"></label><br>
+    <button type="submit" class="btn btn-primary mt-2">submit</button>
+  </form>
+</div>
+
+<h3>User list</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>phone no</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{user.phoneno}}</td>
+    </tr>
+  </tbody>
+</table>
